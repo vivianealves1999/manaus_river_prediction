@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+
+# Cached downloads and derived artefacts.
+# These are all reproducible with `python main.py --refresh-data`, and the raw ANA/Porto
+# archives are large enough that committing them would dominate the repository.
+data/raw/*.csv
+data/processed/*.csv
+data/external/*.csv
+outputs/figures/*.png
+outputs/forecasts/*.csv
+outputs/reports/*
+outputs/run.log
+
+# Keep the directory structure so a fresh clone runs without mkdir.
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/forecasts/.gitkeep
+!outputs/reports/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
